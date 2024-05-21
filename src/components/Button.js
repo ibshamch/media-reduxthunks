@@ -1,5 +1,6 @@
 import className from "classnames";
 import { GoSync } from "react-icons/go";
+import { ImSpinner3 } from "react-icons/im";
 
 function Button({
   children,
@@ -35,7 +36,7 @@ function Button({
 
   return (
     <button {...rest} disabled={loading} className={classes}>
-      {loading ? <GoSync /> : children}
+      {loading ? <ImSpinner3 className="animate-spin" /> : children}
     </button>
   );
 }
